@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <title>Title</title>
     </head>
-    <body>
-        <form action="/login" method="post">
+    <body> <!--We use url_for() to dynamically pass data in case that the path changes e.g. /login etc-->
+        <form action="{{ url_for('receive_data') }}" method="post">
             <label><b>Name</b></label>
             <input type="text" placeholder="name" name="username">
             <label><b>Password</b></label>
